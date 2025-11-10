@@ -1,0 +1,24 @@
+  
+  <!-- Prism core CSS -->
+<link href='https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css' rel='stylesheet'/>
+  <style>
+.code-block {position: relative;background: #1e1e1e;border-radius: 8px;margin: 1rem 0;overflow-x: auto;max-width: 100%;}
+.code-block pre {margin: 0;white-space: pre;padding: 1rem;}
+.code-block code {font-family: &quot;Fira Code&quot;, Consolas, monospace;font-size: 0.9rem;}
+.code-block button {position: absolute;top: 8px;right: 8px;background: #333;color: #fff;border: 1px solid #555;padding: 4px 10px;font-size: 12px;border-radius: 5px;cursor: pointer;transition: background 0.2s ease;
+-webkit-tap-highlight-color: transparent;}
+.code-block button:hover {background: #fff;color: #333;}
+#sourceCode { display: none; }
+    /* Social Plugin LinkList active effect */
+#LinkList77 a:active {
+  transform: scale(0.95);
+  transition: transform 0.2s ease-in-out;     -webkit-tap-highlight-color: transparent;
+}
+/* Labels widget hover effect */
+#Label2 a:hover {
+  background: #FF5800;
+  color: #fff !important;
+  transition: all 0.3s ease-in-out;
+     -webkit-tap-highlight-color: transparent;
+} 
+</style>
