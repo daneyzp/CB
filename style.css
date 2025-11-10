@@ -1,6 +1,6 @@
   
   <!-- Prism core CSS -->
-<link href='https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css' rel='stylesheet'/>
+
 .code-block {position: relative;background: #1e1e1e;border-radius: 8px;margin: 1rem 0;overflow-x: auto;max-width: 100%;}
 .code-block pre {margin: 0;white-space: pre;padding: 1rem;}
 .code-block code {font-family: &quot;Fira Code&quot;, Consolas, monospace;font-size: 0.9rem;}
