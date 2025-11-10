@@ -1,36 +1,20 @@
- <!-- Prism core JS -->
-<!-- Add the languages you want -->
+// Auto-highlight and copy functionality
+document.querySelectorAll('.code-block').forEach((block, i) => {
+  const codeEl = block.querySelector('code');
+  const textarea = document.querySelectorAll('.code-source')[i];
 
-(function showHighlighted() {
-  const raw = document.getElementById(&quot;sourceCode&quot;).value;
-  const codeEl = document.getElementById(&quot;highlighted&quot;);
-  codeEl.textContent = raw;     
-  Prism.highlightElement(codeEl);
-})();
-
-function copyCode() {
-  const raw = document.getElementById(&quot;sourceCode&quot;).value;
-  navigator.clipboard.writeText(raw)
-    .then(() =&gt; (&quot;Code copied!&quot;))
-    .catch(err =&gt; alert(&quot;Copy failed: &quot; + err));
-}
- 
-
-
-// Automatically link each textarea to its code block
-document.querySelectorAll(&#39;.code-block&#39;).forEach((block, i) =&gt; {
-  const codeEl = block.querySelector(&#39;code&#39;);
-  const textarea = document.querySelectorAll(&#39;.code-source&#39;)[i];
-
-  // Fill code and highlight
+  // Set code and highlight
   codeEl.textContent = textarea.value;
   Prism.highlightElement(codeEl);
 
-  // Copy button
-  const button = block.querySelector(&#39;button&#39;);
-  button.addEventListener(&#39;click&#39;, () =&gt; {
+  // Copy button functionality
+  const button = block.querySelector('button');
+  button.addEventListener('click', () => {
     navigator.clipboard.writeText(textarea.value)
-      .then(() =&gt; (&quot;Code copied!&quot;))
-      .catch(err =&gt; alert(&quot;Copy failed: &quot; + err));
+      .then(() => {
+        button.textContent = "Copied!";
+        setTimeout(() => (button.textContent = "Copy"), 2000);
+      })
+      .catch(err => alert("Copy failed: " + err));
   });
 });
