@@ -1,32 +1,27 @@
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prism Code Block Example</title>
+
   <!-- Prism core CSS -->
-<link href='https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css' rel='stylesheet'/>
-  <style>
-.code-block {position: relative;background: #1e1e1e;border-radius: 8px;margin: 1rem 0;overflow-x: auto;max-width: 100%;}
-.code-block pre {margin: 0;white-space: pre;padding: 1rem;}
-.code-block code {font-family: &quot;Fira Code&quot;, Consolas, monospace;font-size: 0.9rem;}
-.code-block button {position: absolute;top: 8px;right: 8px;background: #333;color: #fff;border: 1px solid #555;padding: 4px 10px;font-size: 12px;border-radius: 5px;cursor: pointer;transition: background 0.2s ease;
--webkit-tap-highlight-color: transparent;}
-.code-block button:hover {background: #fff;color: #333;}
-#sourceCode { display: none; }
-    /* Social Plugin LinkList active effect */
-#LinkList77 a:active {
-  transform: scale(0.95);
-  transition: transform 0.2s ease-in-out;     -webkit-tap-highlight-color: transparent;
-}
-/* Labels widget hover effect */
-#Label2 a:hover {
-  background: #FF5800;
-  color: #fff !important;
-  transition: all 0.3s ease-in-out;
-     -webkit-tap-highlight-color: transparent;
-} 
-</style>
-<div class="code-block">
-  <button>Copy</button>
-  <pre><code class="language-python"></code></pre>
-</div>
-<textarea class="code-source"># secure_password.py
+  <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css" rel="stylesheet"/>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Code Block -->
+  <div class="code-block">
+    <button>Copy</button>
+    <pre><code class="language-python"></code></pre>
+  </div>
+
+  <!-- Hidden Code Source -->
+  <textarea class="code-source">
+# secure_password.py
 # Usage: python secure_password.py
 import secrets
 import string
@@ -46,58 +41,19 @@ def generate_password(length=16, use_symbols=True):
 
 if __name__ == "__main__":
     print("Secure password:", generate_password(20))
-</textarea>
- <!-- Prism core JS -->
-<script src='https://cdn.jsdelivr.net/npm/prismjs/prism.min.js'/>
+  </textarea>
 
-<!-- Add the languages you want -->
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js'/>
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js'/>
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-markup.min.js'/> <!-- HTML -->
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js'/>
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js'/>
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js'/>
-  <script>
-(function showHighlighted() {
-  const raw = document.getElementById(&quot;sourceCode&quot;).value;
-  const codeEl = document.getElementById(&quot;highlighted&quot;);
-  codeEl.textContent = raw;     
-  Prism.highlightElement(codeEl);
-})();
+  <!-- Prism JS -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-markup.min.js"></script>
 
-function copyCode() {
-  const raw = document.getElementById(&quot;sourceCode&quot;).value;
-  navigator.clipboard.writeText(raw)
-    .then(() =&gt; (&quot;Code copied!&quot;))
-    .catch(err =&gt; alert(&quot;Copy failed: &quot; + err));
-}
-</script>
-  <!-- Prism JS more code box-->
-<script src='https://cdn.jsdelivr.net/npm/prismjs/prism.min.js'/>
-<!-- Add the languages you want -->
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js'/>
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js'/>
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-markup.min.js'/> <!-- HTML -->
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js'/>
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js'/>
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js'/>
+  <!-- Custom Script -->
+  <script src="script.js"></script>
 
-<script>
-// Automatically link each textarea to its code block
-document.querySelectorAll(&#39;.code-block&#39;).forEach((block, i) =&gt; {
-  const codeEl = block.querySelector(&#39;code&#39;);
-  const textarea = document.querySelectorAll(&#39;.code-source&#39;)[i];
-
-  // Fill code and highlight
-  codeEl.textContent = textarea.value;
-  Prism.highlightElement(codeEl);
-
-  // Copy button
-  const button = block.querySelector(&#39;button&#39;);
-  button.addEventListener(&#39;click&#39;, () =&gt; {
-    navigator.clipboard.writeText(textarea.value)
-      .then(() =&gt; (&quot;Code copied!&quot;))
-      .catch(err =&gt; alert(&quot;Copy failed: &quot; + err));
-  });
-});
-</script>
+</body>
+</html>
