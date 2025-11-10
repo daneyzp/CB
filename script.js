@@ -14,15 +14,7 @@ function copyCode() {
     .then(() =&gt; (&quot;Code copied!&quot;))
     .catch(err =&gt; alert(&quot;Copy failed: &quot; + err));
 }
-  <!-- Prism JS more code box-->
-<script src='https://cdn.jsdelivr.net/npm/prismjs/prism.min.js'/>
-<!-- Add the languages you want -->
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js'/>
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js'/>
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-markup.min.js'/> <!-- HTML -->
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js'/>
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js'/>
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js'/>
+ 
 
 
 // Automatically link each textarea to its code block
