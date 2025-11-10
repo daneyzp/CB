@@ -1,11 +1,6 @@
  <!-- Prism core JS -->
 <!-- Add the languages you want -->
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js'/>
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js'/>
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-markup.min.js'/> <!-- HTML -->
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js'/>
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js'/>
-<script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js'/>
+
 (function showHighlighted() {
   const raw = document.getElementById(&quot;sourceCode&quot;).value;
   const codeEl = document.getElementById(&quot;highlighted&quot;);
