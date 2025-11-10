@@ -1,0 +1,25 @@
+<div class="code-block">
+  <button>Copy</button>
+  <pre><code class="language-python"></code></pre>
+</div>
+<textarea class="code-source"># secure_password.py
+# Usage: python secure_password.py
+import secrets
+import string
+
+def generate_password(length=16, use_symbols=True):
+    alphabet = string.ascii_letters + string.digits
+    if use_symbols:
+        alphabet += "!@#$%^&*()-_=+[]{};:,.<>/?"
+    # Ensure at least one lower, upper, digit, symbol if possible:
+    while True:
+        pwd = ''.join(secrets.choice(alphabet) for _ in range(length))
+        if (any(c.islower() for c in pwd)
+            and any(c.isupper() for c in pwd)
+            and any(c.isdigit() for c in pwd)
+            and (not use_symbols or any(c in string.punctuation for c in pwd))):
+            return pwd
+
+if __name__ == "__main__":
+    print("Secure password:", generate_password(20))
+</textarea>
