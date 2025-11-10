@@ -1,6 +1,4 @@
  <!-- Prism core JS -->
-<script src='https://cdn.jsdelivr.net/npm/prismjs/prism.min.js'/>
-
 <!-- Add the languages you want -->
 <script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-c.min.js'/>
 <script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js'/>
