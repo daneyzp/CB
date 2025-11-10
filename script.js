@@ -8,7 +8,6 @@
 <script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-css.min.js'/>
 <script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js'/>
 <script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js'/>
-  <script>
 (function showHighlighted() {
   const raw = document.getElementById(&quot;sourceCode&quot;).value;
   const codeEl = document.getElementById(&quot;highlighted&quot;);
@@ -22,7 +21,6 @@ function copyCode() {
     .then(() =&gt; (&quot;Code copied!&quot;))
     .catch(err =&gt; alert(&quot;Copy failed: &quot; + err));
 }
-</script>
   <!-- Prism JS more code box-->
 <script src='https://cdn.jsdelivr.net/npm/prismjs/prism.min.js'/>
 <!-- Add the languages you want -->
@@ -33,7 +31,7 @@ function copyCode() {
 <script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js'/>
 <script src='https://cdn.jsdelivr.net/npm/prismjs/components/prism-python.min.js'/>
 
-<script>
+
 // Automatically link each textarea to its code block
 document.querySelectorAll(&#39;.code-block&#39;).forEach((block, i) =&gt; {
   const codeEl = block.querySelector(&#39;code&#39;);
@@ -51,4 +49,3 @@ document.querySelectorAll(&#39;.code-block&#39;).forEach((block, i) =&gt; {
       .catch(err =&gt; alert(&quot;Copy failed: &quot; + err));
   });
 });
-</script>
